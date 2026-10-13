@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programmer's Flowers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <svg class="svg-flower-frame" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <!-- Цэцгийн дэлбээний градиент ба сүүдэр -->
+                <radialGradient id="petal-grad" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#ffcad4"/>
+                    <stop offset="100%" stop-color="#f4978e"/>
+                </radialGradient>
+                <radialGradient id="center-grad" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#ffffff"/>
+                    <stop offset="70%" stop-color="#ffb703"/>
+                    <stop offset="100%" stop-color="#fb8500"/>
+                </radialGradient>
+                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="3" result="blur" />
+                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+            </defs>
+
+            <!-- 1. Иш болон үндсэн шугамууд -->
+            <g id="BaseGroup">
+                <!-- Зүүн ба баруун ишний маш зөөлөн муруй -->
+                <path class="stem" d="M 400,720 C 390,560 300,420 210,340 C 160,295 120,280 90,280" />
+                <path class="stem" d="M 400,720 C 410,560 500,420 590,340 C 640,295 680,280 710,280" />
+                
+                <!-- Ажиллах туслах ишинцэрүүд -->
+                <path class="sub-stem" d="M 310,410 C 270,390 230,395 210,410" />
+                <path class="sub-stem" d="M 490,410 C 530,390 570,395 590,410" />
+            </g>
+
+            <!-- 2. Навчнууд -->
+            <g id="LeafGroup">
+                <!-- Зүүн талын навчнууд -->
+                <path class="leaf" d="M 300,420 C 250,380 220,420 280,450 C 300,440 305,430 300,420 Z" />
+                <path class="leaf" d="M 230,350 C 180,320 160,360 210,380 C 230,370 235,360 230,350 Z" />
+                
+                <!-- Баруун талын навчнууд -->
+                <path class="leaf" d="M 500,420 C 550,380 580,420 520,450 C 500,440 495,430 500,420 Z" />
+                <path class="leaf" d="M 570,350 C 620,320 640,360 590,380 C 570,370 565,360 570,350 Z" />
+            </g>
+
+            <!-- 3. Нахианууд (Buds) -->
+            <g id="BudGroup">
+                <g class="bud" transform="translate(210, 410)">
+                    <path d="M -8,0 C -12,-15 0,-20 0,-20 C 0,-20 12,-15 8,0 C 4,8 -4,8 -8,0 Z" fill="#f4978e" />
+                    <path d="M -6,2 C -8,-8 0,-12 0,-12 C 0,-12 8,-8 6,2 Z" fill="#52b788" />
+                </g>
+                <g class="bud" transform="translate(590, 410)">
+                    <path d="M -8,0 C -12,-15 0,-20 0,-20 C 0,-20 12,-15 8,0 C 4,8 -4,8 -8,0 Z" fill="#f4978e" />
+                    <path d="M -6,2 C -8,-8 0,-12 0,-12 C 0,-12 8,-8 6,2 Z" fill="#52b788" />
+                </g>
+            </g>
+
+            <!-- 4. Үндсэн Цэцгүүд (Pink Flowers) -->
+            <g id="PinkFlowerGroup">
+                <!-- Зүүн талын цэцэг -->
+                <g class="flower" transform="translate(90, 280)">
+                    <!-- Дэлбээнүүд -->
+                    <path class="petal" d="M0,0 C -25,-35 -5, -60 0,-55 C 5,-60 25,-35 0,0" />
+                    <path class="petal" d="M0,0 C -35,-25 -60, -5 -55,0 C -60,5 -35,25 0,0" />
+                    <path class="petal" d="M0,0 C -25,35 -5, 60 0,55 C 5,60 25,35 0,0" />
+                    <path class="petal" d="M0,0 C 35,-25 60, -5 55,0 C 60,5 35,25 0,0" />
+                    <path class="petal" d="M0,0 C -30,-30 -45,-45 -35,-50 C -25,-55 -10,-35 0,0" />
+                    <path class="petal" d="M0,0 C 30,-30 45,-45 35,-50 C 25,-55 10,-35 0,0" />
+                    <!-- Цэцгийн гол -->
+                    <circle class="flower-center" cx="0" cy="0" r="11" />
+                </g>
+
+                <!-- Баруун талын цэцэг -->
+                <g class="flower" transform="translate(710, 280)">
+                    <!-- Дэлбээнүүд -->
+                    <path class="petal" d="M0,0 C -25,-35 -5, -60 0,-55 C 5,-60 25,-35 0,0" />
+                    <path class="petal" d="M0,0 C -35,-25 -60, -5 -55,0 C -60,5 -35,25 0,0" />
+                    <path class="petal" d="M0,0 C -25,35 -5, 60 0,55 C 5,60 25,35 0,0" />
+                    <path class="petal" d="M0,0 C 35,-25 60, -5 55,0 C 60,5 35,25 0,0" />
+                    <path class="petal" d="M0,0 C -30,-30 -45,-45 -35,-50 C -25,-55 -10,-35 0,0" />
+                    <path class="petal" d="M0,0 C 30,-30 45,-45 35,-50 C 25,-55 10,-35 0,0" />
+                    <!-- Цэцгийн гол -->
+                    <circle class="flower-center" cx="0" cy="0" r="11" />
+                </g>
+            </g>
+
+            <!-- 5. Гялалзах тоос болон чимэглэлийн цэгүүд -->
+            <g id="Dots">
+                <circle class="sparkle" cx="400" cy="270" r="3.5" />
+                <circle class="sparkle" cx="370" cy="300" r="2.5" />
+                <circle class="sparkle" cx="430" cy="300" r="2.5" />
+                <circle class="sparkle" cx="310" cy="260" r="2" />
+                <circle class="sparkle" cx="490" cy="260" r="2" />
+            </g>
+        </svg>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
